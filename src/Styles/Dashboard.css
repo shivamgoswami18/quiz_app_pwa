@@ -1,0 +1,12 @@
+.dashboard-performers-table-image-style {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+@media only screen and (max-width: 1200px) {
+    .pie-chart-style {
+        height: auto !important;
+    }
+  }

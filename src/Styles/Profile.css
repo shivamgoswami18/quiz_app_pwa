@@ -1,0 +1,30 @@
+.profile-card-style {
+    width: 400px !important;
+    margin-top: 30px;
+}
+
+.content-center-profile-style {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100vh;
+}
+
+.content-center-profile-margin-style {
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
+}
+
+.admin-image-style {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 425px) {
+    .profile-card-style {
+        width: 300px !important;
+    }
+}

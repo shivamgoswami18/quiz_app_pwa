@@ -1,0 +1,20 @@
+.user-image-parent-style {
+  width: 120px;
+}
+
+.user-image-style {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+}
+
+.user-image-label-style {
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-profile-info {
+  text-align: center;
+  margin-top: 10px;
+}
