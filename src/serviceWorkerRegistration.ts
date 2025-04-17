@@ -3,8 +3,7 @@ const isLocalhost = Boolean(
     window.location.hostname === '[::1]' ||
     window.location.hostname.match(
       /^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/
-    ) ||
-    window.location.hostname.match(/^192\.168\./)
+    )
   );
   
   type Config = {
@@ -13,14 +12,14 @@ const isLocalhost = Boolean(
   };
   
   export function register(config?: Config) {
-    if ('serviceWorker' in navigator) {
-      const publicUrl = new URL(process.env.PUBLIC_URL || '', window.location.href);
+    if (process.env.NODE_ENV === 'production' && 'serviceWorker' in navigator) {
+      const publicUrl = new URL(process.env.PUBLIC_URL!, window.location.href);
       if (publicUrl.origin !== window.location.origin) {
         return;
       }
   
       window.addEventListener('load', () => {
-        const swUrl = `${process.env.PUBLIC_URL || ''}/service-worker.js`;
+        const swUrl = `${process.env.PUBLIC_URL}/service-worker.js`;
   
         if (isLocalhost) {
           checkValidServiceWorker(swUrl, config);
@@ -39,7 +38,7 @@ const isLocalhost = Boolean(
   
   function registerValidSW(swUrl: string, config?: Config) {
     navigator.serviceWorker
-      .register(swUrl)
+      .register(swUrl, { type: 'module' }) // ✅ ES Module support added here
       .then((registration) => {
         registration.onupdatefound = () => {
           const installingWorker = registration.installing;
@@ -91,9 +90,7 @@ const isLocalhost = Boolean(
         }
       })
       .catch(() => {
-        console.log(
-          'No internet connection found. App is running in offline mode.'
-        );
+        console.log('No internet connection found. App is running in offline mode.');
       });
   }
   
