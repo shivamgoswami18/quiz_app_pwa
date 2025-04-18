@@ -62,7 +62,7 @@
     "react-color": "^2.19.3",
     "react-countdown": "^2.3.5",
     "react-countup": "^6.5.0",
-    "react-credit-cards": "^0.8.3",
+    "react-credit-cards-2": "^1.0.3",
     "react-csv": "^2.2.2",
     "react-dom": "^18.2.0",
     "react-dragula": "^1.1.17",
